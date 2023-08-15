@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -20,7 +20,6 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
@@ -29,9 +28,8 @@
 % \usepackage[default]{sourcesanspro}
 
 % serif
-% \usepackage{CormorantGaramond}
+\usepackage{CormorantGaramond}
 % \usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -44,9 +42,10 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{0.9in}
 
-\urlstyle{same}
+
+\urlstyle{rm}
 
 \raggedbottom
 \raggedright
@@ -54,7 +53,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-9pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -70,7 +69,7 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
@@ -78,14 +77,14 @@
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -94,7 +93,7 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -112,54 +111,60 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Ayazhan Kadessova} \\ \vspace{1pt}
+    \textbf{\Huge Ayazhan Kadessova} \\ \vspace{1pt}
     \small Kowloon, Hong Kong $|$ \small (852) 9288-8547 $|$ \href{mailto:kadessovaayazhan@gmail.com}{\underline{kadessovaayazhan@gmail.com}} \\
     \vspace{1pt}
 \href{https://linkedin.com/in/ayazhankad}{\underline{linkedin.com/in/ayazhankad}} $|$
      \href{https://ayazhan-kadessova.netlify.app/}{\underline{Personal Website}} $|$
     \href{https://github.com/ayazhankadessova}{\underline{github.com/ayazhankadessova}}
 \end{center}
-
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {J.P.Morgan Chase \& Co.}{June 2023 -- Aug. 2023}
       {Software Engineering Intern, Global Technology Infrastructure \& Tech Production Delivery}{Kowloon, Hong Kong}
-      \resumeItemListStart
-        \resumeItem{	Implemented Terraform automation for synthetic monitoring, alerting, maintenance window  setup in Dynatrace of services required for executing various product portfolios within in-house application, enabling effective optimization, reducing setup time.}
-        \resumeItem{Built Health Dashboard in Grafana to monitor 30+ services in a production environment of in-house application.}
-        \resumeItem{Configured synthetic monitoring alerts to ensure timely issue resolution, minimize downtime, improve user experience.}
-         \resumeItem{Diversity, Equity, Inclusion Chatbot (Nodejs, API): Led team of 3 backend developers (interns) to tune NLP model for Extractive QA.}
-         \resumeItem{JP Morgan Sports Platform (SQL, H2, Java Spring boot): Secured Second place in JP Morgan Global Hackathon.}
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-   % \resumeSubSubheading
-   %  {Software Engineer I}{Oct 2014 - Sep 2016}
-   %  \resumeItemListStart
-   %     \resumeItem{Apache Beam}
-   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-   %  \resumeItemListEnd
-   % \resumeSubHeadingListEnd
-%-------------------------------------------
+          \resumeProjectHeading
+          {\textbf{Streamlined Observability as Code and Automated CI/CD} $|$ \emph{Dynatrace, Terraform, Jenkins, Jules, Bash}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented Terraform automation for synthetic monitoring, alerting, maintenance window  setup in Dynatrace of services required for executing various product portfolios within in-house application, enabling effective optimization, reducing setup time.}
+          \resumeItemListEnd
+          
+          \resumeProjectHeading
+          {\textbf{Overall Application Health Monitoring} $|$ \emph{Grafana, Gaia Portal}}{}
+          \resumeItemListStart
+            \resumeItem{Built an Overall Health Dashboard in Grafana to monitor 30+ services in a production environment of an in-house application.}
+            \resumeItem{Configured alerts for synthetic monitoring to ensure timely issue resolution, minimize downtime, improving user experience.}
+          \resumeItemListEnd
+                   
+          \resumeProjectHeading
+          {\textbf{Diversity, Equity, Inclusion Chatbot} $|$ \emph{Nodejs, Typescript, API}}{}
+          \resumeItemListStart
+            \resumeItem{Led a team of three backend developer interns within a larger team of six to build a full-stack chatbot that utilizes NLP model fine-tuned on internal documentation to provide guidance on fostering a diverse work environment at JP Morgan. }
+          \resumeItemListEnd
 
     \resumeSubheading
       {Super Cat Technology Limited}{June 2022 - Sep. 2022}
       {Natural Language Processing Engineer}{Kowloon, Hong Kong}
-      \resumeItemListStart
-        \resumeItem{Developed AutoML's Classification part, which finds the most accurate ML models for input data based on user-defined criteria and classifies the target data. Used by the companies for customers' churn prediction.}
-        \resumeItem{Boosted T5-based Table QA accuracy from 60\% to 88\% by filtering columns through semantic search and checking their relevancy.}
-        \resumeItem{Upgraded text classification model from binary (positive/negative) to multi-label (1-5). Integrated a new model in the company Performance Analysis pipeline for optimal customer feedback insight and customer service software for prioritizing queries.}
-    \resumeItemListEnd
+       \resumeProjectHeading
+          {\textbf{Automated Machine Learning} $|$ \emph{Python, PyCaret, MongoDB, Fastapi, Streamlit}}{}
+          \resumeItemListStart
+            \resumeItem{Developed AutoML's Classification part, which finds the most accurate ML models for input data based on user-defined criteria and classifies the target data. Used by the companies for customers' churn prediction. }
+            \resumeItem{Boosted T5-based Table QA accuracy from 60\% to 88\% by filtering columns through semantic search and checking their relevancy.}
+          \resumeItemListEnd
+
+       \resumeProjectHeading
+          {\textbf{Multi-label text classification} $|$ \emph{Python, PyTorch, transformers}}{}
+          \resumeItemListStart
+            \resumeItem{Upgraded text classification model from binary (positive/negative) to multi-label (1-5). Integrated a new model in the company Performance Analysis pipeline for optimal customer feedback insight and customer service software for prioritizing queries.}
+          \resumeItemListEnd
 
     \resumeSubheading
       {Alphalex Capital Management}{Mar. 2022 -- May 2022}
       {IT Investment Intern}{Central, Hong Kong}
       \resumeItemListStart
         % \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Created NFT Collection (ERC-721A) on Solidity from Node.js-generated art to compare user-friendliness of wallets associated with FLOW vs Ethereum blockchains. As a result of my function/cost/user-friendliness testing, FLOW was chosen. }
+        \resumeItem{Created NFT Collection (ERC-721A) on Solidity from Node.js-generated art to compare the user-friendliness of wallets associated with FLOW vs Ethereum blockchains. As a result of my function/cost/user-friendliness testing, FLOW was chosen. }
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -170,33 +175,33 @@
     \resumeSubheading
       {Hong Kong Baptist University}{Kowloon, Hong Kong}
       {BSc (Hons) in Computer Science, cGPA: 3.92/4.0, top 1\% of class}{Sep. 2021 -- Exp. 2025}
-      \vspace{2pt}
   \resumeSubHeadingListEnd
-   \begin{itemize}[leftmargin=0.1in, label={}]
+   \begin{itemize}[leftmargin=0.0in, label={}]
     \small{\item{
-     \textbf{Relevant Courses}{: Data Structures and Algorithms; Database Management; Python and Applications; Problem Solving Using Object Oriented Approach in Java; Statistics, Probability, Calculus; Applied Linear Algebra; Causal Inference with R; Cybersecurity and Data Privacy.} \\
+     \textbf{Relevant Computer Science Courses}{: Data Structures and Algorithms; Database Management; Python; Java; Statistics, Probability, Calculus; Applied Linear Algebra; Causal Inference with R; Cybersecurity and Data Privacy.} \\
+     \textbf{Relevant Finance Courses}{: Investment Management; Unveil the Numbers Before You Invest; Financial Management; Basic Economic Principles.} \\
      \textbf{Awards}{: Finalist of IFTA Fintech and Innovation Awards 2023; 3rd team place in AUHack Hackathon by Aarhus University in Denmark; Finalist of Techathon 2023 by HKSTP; Finalist of Quest for Securities \& Investment Elites (QSIE) Case Analysis Competition 2022.} \\
-     \textbf{Department of Computer Science Special Award 2022 and 2023}{: Recognized among 404 students two years in a row for academic excellence, contribution to Research on Location Analytics System for Smart AED Operations and Peer Mentoring 6 freshmen CS students.} \\
+     \textbf{CS Department Award 2022 \& 2023}{: Recognized twice for Research on Location System contribution and mentoring 6 freshmen among 404 students.} \\
     }}
  \end{itemize}
 
  %-----------Activities-----------
 \section{Activities}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Goldman Sachs }{May 2023}
+      {Goldman Sachs}{May 2023}
       {Women’s Trader Academy}{Central, Hong Kong}
       \resumeItemListStart
         \resumeItem{Ranked Top 3 in Equity trading simulation and gained practical expertise in FX and Equities trading, Market Making fundamentals.}
       \resumeItemListEnd
        \resumeSubheading
       {Google}{Sep. 2022 -- May 2023}
-      {Women’s Trader Academy}{Central, Hong Kong}
+      {Women Techmakers Ambassador}{Central, Hong Kong}
       \resumeItemListStart
         \resumeItem{Awarded Google Generation Scholarship for organizing initiatives to promote inclusion, focusing on empowering women in tech.}
         \resumeItem{Conducted hands-on web scraping using Python workshop for 100 participants with various tech and non-tech backgrounds. }
       \resumeItemListEnd
+\resumeSubHeadingListEnd
       
 % -----------Multiple Positions Heading-----------
    % \resumeSubSubheading
@@ -206,57 +211,31 @@
    %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
    %  \resumeItemListEnd
    % \resumeSubHeadingListEnd
-%-------------------------------------------
 
-    \resumeSubheading
-      {Super Cat Technology Limited}{June 2022 - Sep. 2022}
-      {Natural Language Processing Engineer}{Kowloon, Hong Kong}
-      \resumeItemListStart
-        \resumeItem{Developed AutoML's Classification part, which finds the most accurate ML models for input data based on user-defined criteria and classifies the target data. Used by the companies for customers' churn prediction.}
-        \resumeItem{Boosted T5-based Table QA accuracy from 60\% to 88\% by filtering columns through semantic search and checking their relevancy.}
-        \resumeItem{Upgraded text classification model from binary (positive/negative) to multi-label (1-5). Integrated a new model in the company Performance Analysis pipeline for optimal customer feedback insight and customer service software for prioritizing queries.}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Alphalex Capital Management}{Mar. 2022 -- May 2022}
-      {IT Investment Intern}{Central, Hong Kong}
-      \resumeItemListStart
-        % \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Created NFT Collection (ERC-721A) on Solidity from Node.js-generated art to compare user-friendliness of wallets associated with FLOW vs Ethereum blockchains. As a result of my function/cost/user-friendliness testing, FLOW was chosen. }
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+          {\textbf{LEarnBU} $|$ \emph{HTML, CSS, Javascript, Financial Management}}{}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItem{Created a web-based financial literacy game with different storylines for each character to help HKBU students learn personal financing. }
+            \resumeItem{Engaged 50 players and based on pre-game and post-game scores, helped 82\% acquire knowledge in investing, retirement planning, credit.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+          {\textbf{FAFA, cargo transportation business model} $|$ \emph{Python, Beautiful Soup, Web Scraping, Data Science}}{}
           \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+            \resumeItem{Developed an open-source project, scraping data from cargo transportation website in Kazakhstan \& CIS.}
+            \resumeItem{Conducted exploratory data analysis and authored a comprehensive blog post to suggest the top three business models for maximizing profit, considering route, truck type, and required products.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
-
-
-
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.0in, label={}]
     \small{\item{
-     \textbf{Languages}{: Hashicorp Certified – Terraform Associate (003), AWS Machine Learning Foundations.} \\
-     \textbf{Frameworks}{: Python (proficient), Java/SQL/JavaScript/HTML/CSS(intermediate), TypeScript/C++(prior experience).} \\
-     \textbf{Developer Tools}{: Terraform/Git (proficient), Dynatrace, Jenkins, Jules, React.js (intermediate), NodeJS, Cloud(AWS, Azure).} \\}
+     \textbf{Certificates}{: Hashicorp Certified – Terraform Associate (003), AWS Machine Learning Foundations.} \\
+     \textbf{Languages}{: Python (proficient), Java/SQL/JavaScript/HTML/CSS(intermediate), TypeScript/C++(prior experience).} \\
+     \textbf{Frameworks and Tools}{: Terraform/Git (proficient), Dynatrace, Jenkins, Jules, React.js (intermediate), NodeJS, Cloud(AWS, Azure).}} \\}
  \end{itemize}
 
 
